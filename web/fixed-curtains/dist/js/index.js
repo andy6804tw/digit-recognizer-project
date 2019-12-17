@@ -169,7 +169,7 @@ async function init() {
     }
 }
 
-function predict() {
+async function predict() {
     const imageData = ctx.getImageData(0, 0, 140, 140);
     var img = document.createElement("img");
     img.src = canvas.toDataURL("image/png");
@@ -179,10 +179,14 @@ function predict() {
     const dataURL = canvas.toDataURL('image/png');
     button.href = dataURL;
 
+    const image = dataURL.split(",")[1];
+    result=await predictDigit(image);
+    console.log(result);
+
     //convert to tensor 
-    var tfImg = tf.fromPixels(imageData, 1);
-    var smalImg = tf.image.resizeBilinear(tfImg, [28, 28]);
-    console.log(canvas.toDataURL("image/png"))
+    // var tfImg = tf.fromPixels(imageData, 1);
+    // var smalImg = tf.image.resizeBilinear(tfImg, [28, 28]);
+    // console.log(canvas.toDataURL("image/png"))
     // smalImg = tf.cast(smalImg, 'float32');
     // var tensor = smalImg.expandDims(0);
     // tensor = tensor.div(tf.scalar(255));
