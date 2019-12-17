@@ -29,9 +29,14 @@ nav a {
 }
 
 html,
-body,
-main {
+body{
   height: 100%;
+}
+.main-section{
+  height: 100%;
+}
+.sub-section{
+  height: 20%;
 }
 
 header[role="banner"] {
@@ -61,7 +66,6 @@ main[role="main"] > * {
 
 .fcurtain--cover {
   width: 100%;
-  min-height: 100%;
   position: relative;
   background-size: cover;
   background-attachment: fixed;
