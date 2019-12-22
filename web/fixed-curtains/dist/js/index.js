@@ -167,13 +167,14 @@ async function init() {
         canvas.addEventListener('touchend', sketchpad_touchEnd, false);
         canvas.addEventListener('touchmove', sketchpad_touchMove, false);
     }
+    model = await tf.loadModel('./model/model.json');
 }
 
 async function predict() {
     const imageData = ctx.getImageData(0, 0, 140, 140);
-    var img = document.createElement("img");
-    img.src = canvas.toDataURL("image/png");
-    document.body.appendChild(img);
+    // var img = document.createElement("img");
+    // img.src = canvas.toDataURL("image/png");
+    // document.body.appendChild(img);
 
     const button = document.getElementById('btn-download');
     const dataURL = canvas.toDataURL('image/png');
@@ -184,10 +185,22 @@ async function predict() {
     console.log(result);
 
     //convert to tensor 
-    // var tfImg = tf.fromPixels(imageData, 1);
-    // var smalImg = tf.image.resizeBilinear(tfImg, [28, 28]);
-    // console.log(canvas.toDataURL("image/png"))
-    // smalImg = tf.cast(smalImg, 'float32');
-    // var tensor = smalImg.expandDims(0);
-    // tensor = tensor.div(tf.scalar(255));
+    var tfImg = tf.fromPixels(imageData, 1);
+    var smalImg = tf.image.resizeBilinear(tfImg, [28, 28]);
+    console.log(canvas.toDataURL("image/png"))
+    smalImg = tf.cast(smalImg, 'float32');
+    var tensor = smalImg.expandDims(0);
+    tensor = tensor.div(tf.scalar(255));
+    const prediction = model.predict(tensor);
+            const predictedValues = prediction.dataSync();
+            var isThereAnyPrediction = false;
+            for (index = 0; index < predictedValues.length; index++) {
+                if (predictedValues[index] > 0.5) {
+                    isThereAnyPrediction = true;
+                    document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
+                }
+            }
+            if (!isThereAnyPrediction) {
+                document.getElementById('rightside').innerHTML = '<br>Unable to Predict';
+            }
 }
