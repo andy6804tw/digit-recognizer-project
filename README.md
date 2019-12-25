@@ -5,5 +5,3 @@
 
 - [Super fast GPU based T-SNE-CUDA on Kaggle](https://medium.com/analytics-vidhya/super-fast-tsne-cuda-on-kaggle-b66dcdc4a5a4)
 - [demo mnist web](https://medium.com/coinmonks/handwritten-digit-prediction-using-convolutional-neural-networks-in-tensorflow-with-keras-and-live-5ebddf46dc8?)
-- []()
-- []()
