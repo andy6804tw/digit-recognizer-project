@@ -7,7 +7,7 @@ import base64
 
 #讀取Model
 # KNN Model
-with open('API/app/modules/MNIST/resource/knn-35-4000-scale-all.pickle', 'rb') as f:
+with open('app/modules/MNIST/resource/knn-35-4000-scale-all.pickle', 'rb') as f:
     knnModel = pickle.load(f)
 # Keras Model
 # kerasModel = load_model('app/modules/MNIST/resource/mnistCNN.h5')
