@@ -10,8 +10,7 @@ const predictDigit=(image)=>{
         resolve(dataObject);
       },
         (error) => {
-          var message = error.response.data.message;
-          resolve(message);
+          resolve('dataObject');
         }
       );
   });
