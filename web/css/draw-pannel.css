@@ -1,8 +1,8 @@
 
 .draw-pannel{
-  width: 600px;
+  max-width: 600px;
   height: 400px;
-  background: rgba(0, 0, 0, 0.26);
+  /* background: rgba(0, 0, 0, 0.26); */
 }
 
 /* Some CSS styling */
@@ -18,23 +18,21 @@
 }
 
 .rightside {
-  float: left;
   width: 140px;
-  height: 125px;
+  height: 140px;
   background-color: #def;
   padding: 10px;
   border-radius: 4px;
 }
 
-.leftside {
+/* .leftside {
   float: left;
   width: 150px;
   height: 200px;
   margin-left: 10px;
-}
+} */
 
 #sketchpad {
-  float: left;
   height: 140px;
   width: 140px;
   border: 2px solid #888;
