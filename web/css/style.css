@@ -21,7 +21,7 @@ body {
 
 .content {
   position: relative;
-  width: 800px;
+  width: 700px;
   /* height: 50%; */
   max-width: 100%;
   margin: 20px;
@@ -42,7 +42,7 @@ body {
 .content p:last-child {
   margin-bottom: 0;
 }
-.content button {
+.content button, .content a{
   display: inline-block;
   margin-top: 2rem;
   padding: 0.5rem 1rem;
@@ -53,6 +53,9 @@ body {
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
+}
+.content img{
+  width: 65%;
 }
 
 .particle {

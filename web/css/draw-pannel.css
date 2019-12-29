@@ -17,12 +17,16 @@
   user-select: none;
 }
 
-.rightside {
+.predict {
   width: 140px;
   height: 140px;
-  background-color: #def;
+  /* background-color: rgb(219, 219, 219); */
   padding: 10px;
+  border: 2px solid #888;
   border-radius: 4px;
+  border-style:dashed;
+  margin: auto;
+  padding: 0;
 }
 
 /* .leftside {
@@ -42,18 +46,16 @@
   /* Necessary for correct mouse co-ords in Firefox */
 }
 
-#clearbutton {
-  font-size: 15px;
-  padding: 10px;
-  -webkit-appearance: none;
-  background: #eee;
-  border: 1px solid #888;
+#clearbutton,#predictbutton,#downloadButton  {
+  border: 3px solid #595959;
 }
-
-#predictbutton {
-  font-size: 15px;
-  padding: 10px;
-  -webkit-appearance: none;
-  background: #eee;
-  border: 1px solid #888;
+a { 
+  color: inherit; 
+  height: 100%;
+  background-color: teal;
+} 
+a:hover {
+  color: white;
+  text-decoration:none; 
+  cursor:pointer;  
 }

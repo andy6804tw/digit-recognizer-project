@@ -176,7 +176,7 @@ async function predict() {
     // img.src = canvas.toDataURL("image/png");
     // document.body.appendChild(img);
 
-    const button = document.getElementById('btn-download');
+    const button = document.getElementById('downloadButton');
     const dataURL = canvas.toDataURL('image/png');
     button.href = dataURL;
 

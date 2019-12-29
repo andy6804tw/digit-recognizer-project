@@ -102,15 +102,21 @@
       <div class="draw-pannel container p-5" id="mnistapp">
         <div class="row justify-content-center align-items-center">
           <div class="col-6">
+            <p>Draw Pannel</p>
             <canvas id="sketchpad" height="140" width="140"></canvas>
           </div>
-          <div class="col-6">
-            <div id="rightside" class="rightside"></div>
+          <div class="col-6 mb-2">
+            <p>Predicted Number</p>
+            <!-- <div id="rightside" class="predict"></div> -->
+            <div class="predict">
+              <img class="mt-4" src="https://image.flaticon.com/icons/png/512/752/752667.png" alt="" srcset="">
+            </div>
           </div>
           <div class="col-12">
-            <input type="submit" value="Predict" id="predictbutton" onclick="predict();">
-        <input type="submit" value="Clear" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
-        <a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a>
+            <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
+            <button type="button" class="btn btn-warning" id="clearbutton" onclick="clearCanvas(canvas,ctx)">Clear</button>
+            <a class="btn btn-success" id="downloadButton" href="#" download="my-file-name.png">Download</a>
+            
           </div>
         </div>
       </div>
