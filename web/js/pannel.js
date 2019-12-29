@@ -172,6 +172,7 @@ async function init() {
 
 async function predict() {
     const imageData = ctx.getImageData(0, 0, 140, 140);
+    const predictImg=document.getElementById("predictImg");
     // var img = document.createElement("img");
     // img.src = canvas.toDataURL("image/png");
     // document.body.appendChild(img);
@@ -197,14 +198,13 @@ async function predict() {
             for (index = 0; index < predictedValues.length; index++) {
                 if (predictedValues[index] > 0.5) {
                     isThereAnyPrediction = true;
-                    const predictImg=document.getElementById("predictImg");
                     predictImg.src=`image/img${index}.png`
                     checkCorrect(index);
                     // document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
                 }
             }
             if (!isThereAnyPrediction) {
-                document.getElementById('rightside').innerHTML = '<br>Unable to Predict';
+                predictImg.src=`image/img${index}.png`
             }
 }
 
