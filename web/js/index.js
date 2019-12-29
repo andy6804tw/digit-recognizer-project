@@ -55,7 +55,7 @@ function drawLine(ctx, x, y, size) {
 // Clear the canvas context using the canvas width and height
 function clearCanvas(canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    document.getElementById('rightside').innerHTML = '';
+    // document.getElementById('rightside').innerHTML = '';
 }
 
 // Keep track of the mouse button being pressed and draw a dot at current location
