@@ -216,7 +216,7 @@ var applyScrolling = function (arr, cb) {
   }
   
   // 注意如果有使用 router 那麼自訂一個 class 可以避免一些問題
-  var anchors = document.querySelectorAll("a[href^='#']")
+  var anchors = document.querySelectorAll("a[href^='#section']")
   if (window.scrollTo) {
     applyScrolling(anchors, function (index, el) {
       var target = document.getElementById(el.getAttribute('href').substring(1))
