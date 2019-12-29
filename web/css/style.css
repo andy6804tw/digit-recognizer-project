@@ -59,7 +59,8 @@ nav a:hover{
 }
 
 .content {
-  /* position: relative; */
+  position: relative;
+  height: auto;
   width: 700px;
   max-width: 100%;
   margin: 20px;

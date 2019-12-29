@@ -59,6 +59,34 @@ a:hover {
     font-family: 'DFHsiu-W3-WIN-BF';
     src: url(web/css/DFHsiu-W3-WIN-BF.woff) format('woff');
 }
+.content h1 {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  margin-left: auto;
+}
+.note-text.ex.blue {
+  font-size: 28px;
+  font-family: "DFHsiu-W3-WIN-BF";
+  margin-top: 13px;
+  margin-left: 26px;
+  padding-bottom: 0px;
+  padding-left: 36px;
+  float: left;
+  background-image: url(http://uploads.webflow.com/5317d67d660658b254000454/534e3bfe3392f3d069000167_arrow-blue-leftz.png);
+  background-position: 0px 38%;
+  background-size: 38px;
+  background-repeat: no-repeat;
+  color: #4c9efc;
+  margin: auto;
+}
+
   .note-text.ex.pink {
     font-size: 20px;
     font-family: "DFHsiu-W3-WIN-BF";
