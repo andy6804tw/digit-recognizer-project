@@ -57,7 +57,7 @@ a:hover {
 
   @font-face {
     font-family: 'DFHsiu-W3-WIN-BF';
-    src: url(web/css/DFHsiu-W3-WIN-BF.woff) format('woff');
+    src: url(./DFHsiu-W3-WIN-BF.woff) format('woff');
 }
 .content h1 {
   border-radius: 50%;
