@@ -34,6 +34,12 @@ nav{
 }
 nav a{
   color: white;
+  border: 3px solid transparent;
+}
+nav a:hover{
+  border: 3px solid #595959;
+  background: transparent;
+  color: #595959;
 }
 
 .particle-section {

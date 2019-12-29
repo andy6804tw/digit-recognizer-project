@@ -206,3 +206,22 @@ async function predict() {
                 document.getElementById('rightside').innerHTML = '<br>Unable to Predict';
             }
 }
+
+arr=["section1","section2","section3"]
+var applyScrolling = function (arr, cb) {
+    for (var i = 0; i < arr.length; i++) {
+      cb.call(null, i, arr[i])
+    }
+  }
+  
+  // 注意如果有使用 router 那麼自訂一個 class 可以避免一些問題
+  var anchors = document.querySelectorAll("a[href^='#']")
+  if (window.scrollTo) {
+    applyScrolling(anchors, function (index, el) {
+      var target = document.getElementById(el.getAttribute('href').substring(1))
+      el.addEventListener('click', function (e) {
+        e.preventDefault()
+        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop})
+      })
+    })
+  }
