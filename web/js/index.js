@@ -7,6 +7,7 @@ targetNumber.innerText=target;
 const reflash=()=>{
   target=Math.floor(Math.random() * 10); 
   targetNumber.innerText=target;
+  clearCanvas(canvas,ctx);
 }
 
 const checkCorrect=(index)=>{

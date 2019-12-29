@@ -55,7 +55,7 @@ function drawLine(ctx, x, y, size) {
 // Clear the canvas context using the canvas width and height
 function clearCanvas(canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // document.getElementById('rightside').innerHTML = '';
+    predictImg.src=``
 }
 
 // Keep track of the mouse button being pressed and draw a dot at current location
@@ -197,7 +197,7 @@ async function predict() {
             for (index = 0; index < predictedValues.length; index++) {
                 if (predictedValues[index] > 0.5) {
                     isThereAnyPrediction = true;
-                    predictImg=document.getElementById("predictImg");
+                    const predictImg=document.getElementById("predictImg");
                     predictImg.src=`image/img${index}.png`
                     checkCorrect(index);
                     // document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
