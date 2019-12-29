@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>404 galaxy not found</title>
+  <title>手寫數字辨識</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/draw-pannel.css">
@@ -24,6 +24,7 @@
     <span class='particle'>8</span>
     <span class='particle'>9</span>
     <span class='particle'>0</span>
+    <!-- <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
@@ -52,7 +53,6 @@
     <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
-    <span class='particle'>4</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
@@ -92,7 +92,7 @@
     <span class='particle'>0</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
-    <span class='particle'>0</span>
+    <span class='particle'>0</span> -->
     <article class='content'>
       <!-- <p>Damnit stranger,</p>
     <p>You got lost in the <strong>404</strong> galaxy.</p>
@@ -109,14 +109,13 @@
             <p>Predicted Number</p>
             <!-- <div id="rightside" class="predict"></div> -->
             <div class="predict">
-              <img class="mt-4" src="https://image.flaticon.com/icons/png/512/752/752667.png" alt="" srcset="">
+              <img class="mt-4" src="" id="predictImg">
             </div>
           </div>
           <div class="col-12">
             <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
             <button type="button" class="btn btn-warning" id="clearbutton" onclick="clearCanvas(canvas,ctx)">Clear</button>
             <a class="btn btn-success" id="downloadButton" href="#" download="my-file-name.png">Download</a>
-            
           </div>
         </div>
       </div>

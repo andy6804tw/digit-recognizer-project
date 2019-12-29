@@ -197,7 +197,10 @@ async function predict() {
             for (index = 0; index < predictedValues.length; index++) {
                 if (predictedValues[index] > 0.5) {
                     isThereAnyPrediction = true;
-                    document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
+                    predictImg=document.getElementById("predictImg");
+                    predictImg.src=`image/img${index}.png`
+                    console.log(index);
+                    // document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
                 }
             }
             if (!isThereAnyPrediction) {
