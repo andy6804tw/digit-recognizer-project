@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>手寫數字辨識</title>
+  <link href="//db.onlinewebfonts.com/c/bd7d41b62e556f2a9275a4012eacb7a8?family=KremlinC" rel="stylesheet"
+    type="text/css" />
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/draw-pannel.css">
@@ -13,10 +15,10 @@
 <body onload="init()">
   <!-- header -->
   <header role="banner">
-    
-    <h3 class="fcurtain-identity">
+
+    <h3 class="logo">
       <img src="https://image.flaticon.com/icons/png/512/1170/1170170.png" alt="" srcset="">
-      手寫數字辨識 
+      手寫數字辨識
     </h3>
 
     <nav role="navigation">
@@ -116,10 +118,12 @@
       <div class="draw-pannel container p-5" id="mnistapp">
         <div class="row justify-content-center align-items-center">
           <div class="col-6">
+            <div class="note-text ex pink">Try it! 手寫數字</div>
             <p>Draw Pannel</p>
             <canvas id="sketchpad" height="140" width="140"></canvas>
           </div>
           <div class="col-6 mb-2">
+            <div class="note-text ex pink2">預測數字</div>
             <p>Predicted Number</p>
             <!-- <div id="rightside" class="predict"></div> -->
             <div class="predict">
@@ -128,7 +132,8 @@
           </div>
           <div class="col-12">
             <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
-            <button type="button" class="btn btn-warning" id="clearbutton" onclick="clearCanvas(canvas,ctx)">Clear</button>
+            <button type="button" class="btn btn-warning" id="clearbutton"
+              onclick="clearCanvas(canvas,ctx)">Clear</button>
             <a class="btn btn-success" id="downloadButton" href="#" download="my-file-name.png">Download</a>
           </div>
         </div>

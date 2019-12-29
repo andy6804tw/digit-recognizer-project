@@ -54,3 +54,31 @@ a:hover {
   text-decoration:none; 
   cursor:pointer;  
 }
+
+  @font-face {
+    font-family: 'DFHsiu-W3-WIN-BF';
+    src: url(web/css/DFHsiu-W3-WIN-BF.woff) format('woff');
+}
+  .note-text.ex.pink {
+    font-size: 20px;
+    font-family: "DFHsiu-W3-WIN-BF";
+    padding-right: 47px;
+    background-image: url(https://i.imgur.com/I0iCnwv.png);
+    background-position: 90% 100%;
+    background-size: 36px;
+    background-repeat: no-repeat;
+    color: #e83174;
+    }
+  
+    .note-text.ex.pink2 {
+      margin-top: 3px;
+    /* padding-right: 27px;  */
+    font-size: 20px;
+    font-family: "DFHsiu-W3-WIN-BF";
+    background-image: url(https://i.imgur.com/FwHWCgu.png);
+    background-position: 40px 38%;
+    background-size: 36px;
+    background-repeat: no-repeat;
+    color: #e83174;
+      }
+    

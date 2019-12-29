@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-header{
+header[role="banner"] {
   display: flex;
   align-items: center;
   position: absolute;
@@ -21,8 +21,12 @@ header{
   right: 0;
   width: auto;
   z-index: 1;
-  padding: 10px 30px;
+  padding: 20px 30px;
   /* background: #61afeb62; */
+}
+header .logo{
+  color: white;
+  margin: auto;
 }
 header img{
   width: 30px;
@@ -157,7 +161,7 @@ nav a:hover{
 }
 .particle:nth-child(9) {
   top: 0.9756097561%;
-  left: 21.568627451%;
+  left: 28.568627451%;
   font-size: 20px;
   filter: blur(0.18px);
   animation: 23s float2 infinite;
