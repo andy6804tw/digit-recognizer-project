@@ -1,10 +1,39 @@
 body {
   margin: 0;
   font-size: 20px;
+  color: white;
+  /* background-color: rgb(247, 99, 136); */
+  background-image: linear-gradient(rgba(25, 181, 254, 0.6),rgba(166, 219, 255, 0.822)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
+  /* background-image: linear-gradient(rgba(25, 254, 178, 0.6),rgba(202, 255, 166, 0.822)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)); */
+  /* background-image: linear-gradient(rgba(254, 25, 75, 0.6),rgba(255, 179, 166, 0.822)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)); */
 }
 
 * {
   box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 1;
+  padding: 10px 30px;
+  /* background: #61afeb62; */
+}
+header img{
+  width: 30px;
+}
+
+nav{
+  flex: 5;
+  text-align: right;
+}
+nav a{
+  color: white;
 }
 
 .particle-section {
@@ -13,7 +42,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: white;
+  background: rgba(255, 255, 255, 0);
   color: black;
   font-family: arial, sans-serif;
   overflow: hidden;
@@ -62,6 +91,7 @@ body {
   position: absolute;
   display: block;
   pointer-events: none;
+  color: white;
 }
 .particle:nth-child(1) {
   top: 72.2832722833%;

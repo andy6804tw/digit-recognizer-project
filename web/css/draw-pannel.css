@@ -2,7 +2,6 @@
 .draw-pannel{
   max-width: 600px;
   height: 400px;
-  /* background: rgba(0, 0, 0, 0.26); */
 }
 
 /* Some CSS styling */
@@ -49,11 +48,7 @@
 #clearbutton,#predictbutton,#downloadButton  {
   border: 3px solid #595959;
 }
-a { 
-  color: inherit; 
-  height: 100%;
-  background-color: teal;
-} 
+
 a:hover {
   color: white;
   text-decoration:none; 

@@ -199,7 +199,6 @@ async function predict() {
                     isThereAnyPrediction = true;
                     predictImg=document.getElementById("predictImg");
                     predictImg.src=`image/img${index}.png`
-                    console.log(index);
                     // document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
                 }
             }
