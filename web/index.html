@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/draw-pannel.css">
-  
+  <link rel="stylesheet" href="./css/footer-animate.css">
+
 
 </head>
 
@@ -40,7 +41,6 @@
     <span class='particle'>8</span>
     <span class='particle'>9</span>
     <span class='particle'>0</span>
-    <!-- <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
@@ -69,6 +69,7 @@
     <span class='particle'>4</span>
     <span class='particle'>4</span>
     <span class='particle'>4</span>
+    <span class='particle'>4</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
@@ -108,7 +109,7 @@
     <span class='particle'>0</span>
     <span class='particle'>0</span>
     <span class='particle'>0</span>
-    <span class='particle'>0</span> -->
+    <span class='particle'>0</span>
     <section class='content'>
       <!-- <p>Damnit stranger,</p>
     <p>You got lost in the <strong>404</strong> galaxy.</p>
@@ -123,17 +124,17 @@
                 <h1 id="targetNumber">3</h1>
               </div>
               <div class="col-4 text-left">
-                <div class="note-text ex blue">目標數字</div>
+                <div class="note-text exblue">目標數字</div>
               </div>
             </div><br>
           </div>
           <div class="col-6">
-            <div class="note-text ex pink">Try it! 手寫數字</div>
+            <div class="note-text expink">Try it! 手寫數字</div>
             <p>Draw Pannel</p>
             <canvas id="sketchpad" height="140" width="140"></canvas>
           </div>
           <div class="col-6 mb-2">
-            <div class="note-text ex pink2">預測數字</div>
+            <div class="note-text expink2">預測數字</div>
             <p>Predicted Number</p>
             <!-- <div id="rightside" class="predict"></div> -->
             <div class="predict">
@@ -142,7 +143,8 @@
           </div>
           <div class="col-12">
             <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
-            <button type="button" class="btn btn-warning" id="clearbutton" onclick="clearCanvas(canvas,ctx)">Clear</button>
+            <button type="button" class="btn btn-warning" id="clearbutton"
+              onclick="clearCanvas(canvas,ctx)">Clear</button>
             <button type="button" class="btn btn-info" id="clearbutton" onclick="reflash()">Reflash</button>
             <a class="btn btn-success" id="downloadButton" href="#" download="handwrite-number.png">Download</a>
           </div>
@@ -177,6 +179,130 @@
       </div>
     </div>
   </section>
+  <!-- amimate -->
+  <section class="section-amimate p-5 mb-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-5">
+        <div class="icons-left">
+          <div class="icon-clock vertical-align">
+            <div class="clock ball pink extra-big scale-animation delay-730">
+              <!-- 0 -->
+              <img src="https://image.flaticon.com/icons/png/512/594/594712.png" style="width: 100%;z-index: 100;">
+            </div>
+            <div class="ball medium pink scale-animation delay-830"></div>
+            <div class="dashed-pink">
+              <div class="ball extra-small pink"></div>
+              <div class="ball small pink"></div>
+            </div>
+            <div class="arrow pink scale-animation delay-1030"></div>
+          </div>
+          <div class="icon-sun vertical-align">
+            <div class="sun-cloud">
+              <div class="sun sun-animation delay-830">
+                <!-- 1 -->
+                <img src="https://image.flaticon.com/icons/png/512/1378/1378209.png" style="width: 100%;z-index: 100;">
+              </div>
+            </div>
+            <div class="ball medium yellow scale-animation delay-930"></div>
+            <div class="dashed-yellow">
+              <div class="ball extra-small yellow"></div>
+              <div class="ball small yellow"></div>
+            </div>
+            <div class="arrow yellow scale-animation delay-1130"></div>
+          </div>
+          <div class="icon-marker vertical-align">
+            <div class="marker marker-animation delay-930">
+              <img src="https://image.flaticon.com/icons/png/512/594/594666.png" style="width: 150%;z-index: 100;">
+            </div>
+            <div class="ball medium red scale-animation delay-1030"></div>
+            <div class="dashed-red">
+              <div class="ball small red"></div>
+              <div class="ball small red"></div>
+              <div class="ball extra-small red"></div>
+            </div>
+            <div class="arrow red scale-animation delay-1230"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="phone phone-scale-animation delay-230">
+          <div class="sound scale-animation delay-530"></div>
+          <div class="screen">
+            <div class="ball pink first big scale-animation delay-630"></div>
+            <div class="ball pink second small scale-animation delay-690"></div>
+            <div class="ball pink third big scale-animation delay-630"></div>
+            <div class="ball pink fourth small scale-animation delay-690"></div>
+            <div class="ball red fifth medium scale-animation delay-860"></div>
+            <div class="ball red sixth small scale-animation delay-890"></div>
+            <div class="ball red seventh medium scale-animation delay-860"></div>
+            <div class="ball yellow eighth medium scale-animation delay-760"></div>
+            <div class="ball yellow ninth medium scale-animation delay-760"></div>
+            <div class="ball yellow tenth medium scale-animation delay-760"></div>
+            <div class="ball yellow eleventh extra-small scale-animation delay-790"></div>
+            <div class="ball yellow twelfth small scale-animation delay-790"></div>
+            <div class="ball red thirteenth small scale-animation delay-890"></div>
+            <div class="ball red fourteenth medium scale-animation delay-860"></div>
+            <div class="ball red fifteenth big scale-animation delay-830"></div>
+            <div class="ball red sixteenth small scale-animation delay-890"></div>
+            <div class="ball red seventeenth big scale-animation delay-830"></div>
+            <div class="ball red eighteenth medium scale-animation delay-860"></div>
+            <div class="ball red nineteenth small scale-animation delay-890"></div>
+            <div class="ball yellow twentieth small scale-animation delay-790"></div>
+            <div class="ball yellow twenty-first small scale-animation delay-790"></div>
+            <div class="ball yellow twenty-second extra-small scale-animation delay-790"></div>
+            <div class="ball pink twenty-third medium scale-animation delay-660"></div>
+            <div class="center-composition reverse-scale-animation delay-1130">
+              <div class="ball dashed big opacity-03 center-element rotate"></div>
+              <div class="ball dashed medium opacity-05 center-element rotate"></div>
+              <div class="ball dashed small center-element rotate"></div>
+              <div class="ball green extra-big center-element rotate">
+                <div class="square green first vertical"></div>
+                <div class="square green second horizontal"></div>
+                <div class="square green third vertical"></div>
+                <div class="square green fourth vertical"></div>
+              </div>
+              <div class="ball dark-yellow medium-big center-element"></div>
+            </div>
+          </div>
+          <div class="home scale-animation delay-530"></div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="icons-right">
+          <div class="hamburger opacity delay-830">
+            <!-- 5 -->
+            <img src="https://i.imgur.com/v70WEZ7.png" style="width: 95%;z-index: 100;">
+          </div>
+          <div class="tower opacity delay-930">
+            <!-- 1 -->
+            <img src="https://i.imgur.com/Y48wwFk.png" style="width: 70%;z-index: 100;">
+          </div>
+          <div class="tree opacity delay-1030">
+            <!-- 9 -->
+            <img src="https://i.imgur.com/Ts9ksHt.png" style="width: 90%;z-index: 100;">
+          </div>
+          <div class="tree small opacity delay-1030">
+            <!-- 3 -->
+            <img src="https://i.imgur.com/BQ2YoTK.png" style="width: 100%;margin-left: 55px;">
+          </div>
+          <div class="boat opacity delay-1130">
+            <!-- 2 -->
+            <img src="https://i.imgur.com/GbrHAmh.png" style="width: 100%;z-index: 100;">
+          </div>
+          <div class="boat opacity delay-930">
+            <!-- 0 -->
+            <img src="https://i.imgur.com/xoSe7Fw.png" style="width: 80%;margin: 80px -40px;">
+          </div>
+          <div class="boat opacity delay-1130">
+            <!-- 0 -->
+            <img src="https://i.imgur.com/Uwb4kzl.png" style="width: 90%;margin: 100px 80px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Section2 Heroku -->
   <section class="section2 p-5" id="section2">
     <div class="row justify-content-center align-items-center">
       <div class="col-sm-12 col-md-6 p-4 text-center">
@@ -195,12 +321,14 @@
     sdfsd3
   </section>
 
+
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"> </script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/config.js"></script>
   <script src="./js/predict.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/pannel.js"></script>
+  <script src="./js/animate.js"></script>
 </body>
 
 </html>

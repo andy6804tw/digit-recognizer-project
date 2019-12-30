@@ -71,7 +71,7 @@ a:hover {
   font-size: 20px;
   margin-left: auto;
 }
-.note-text.ex.blue {
+.note-text.exblue {
   font-size: 28px;
   font-family: "DFHsiu-W3-WIN-BF";
   margin-top: 13px;
@@ -87,7 +87,7 @@ a:hover {
   margin: auto;
 }
 
-  .note-text.ex.pink {
+  .note-text.expink {
     font-size: 20px;
     font-family: "DFHsiu-W3-WIN-BF";
     padding-right: 47px;
@@ -98,7 +98,7 @@ a:hover {
     color: #e83174;
     }
   
-    .note-text.ex.pink2 {
+    .note-text.expink2 {
       margin-top: 3px;
     font-size: 20px;
     font-family: "DFHsiu-W3-WIN-BF";
