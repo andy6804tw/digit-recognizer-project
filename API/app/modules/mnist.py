@@ -8,7 +8,7 @@ import base64
 # import urllib.request
 import gzip
 
-with gzip.open('API/app/modules/MNIST/resource/knn-40-5000-scale-all.pgz', 'rb') as f:
+with gzip.open('app/modules/MNIST/resource/knn-40-5000-scale-all.pgz', 'rb') as f:
     knnModel = pickle.load(f)
 
 #讀取Model
@@ -55,7 +55,7 @@ def kerasPredict(image):
 
 def getResult(base64Image=''):
   if base64Image=='':
-    image = cv2.imread("API/app/modules/MNIST/data/6.png")[:,:,::-1]
+    image = cv2.imread("app/modules/MNIST/data/6.png")[:,:,::-1]
   else:
     image=base64_cv2(base64Image)
 
