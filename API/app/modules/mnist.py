@@ -8,11 +8,8 @@ import gzip
 import os
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../')
-# STATIC_ROOT= os.path.join(PROJECT_DIR,'API/')
-STATICFILES_DIRS = ()
-print(PROJECT_DIR)
-with gzip.open(PROJECT_DIR+'app/modules/MNIST/resource/xgb-42-5000-scale-all.pgz', 'rb') as f:
+PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../../')
+with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb-42-5000-scale-all.pgz', 'rb') as f:
     knnModel = pickle.load(f)
 
 #讀取Model
@@ -59,7 +56,7 @@ def kerasPredict(image):
 
 def getResult(base64Image=''):
   if base64Image=='':
-    image = cv2.imread("app/modules/MNIST/data/6.png")[:,:,::-1]
+    image = cv2.imread(PROJECT_DIR+"API/app/modules/MNIST/data/6.png")[:,:,::-1]
   else:
     image=base64_cv2(base64Image)
 

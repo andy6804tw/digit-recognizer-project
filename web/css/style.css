@@ -38,12 +38,12 @@ nav{
 }
 nav a{
   color: white;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
+  
 }
 nav a:hover{
-  border: 3px solid #595959;
-  background: transparent;
-  color: #595959;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
 }
 
 .particle-section {
