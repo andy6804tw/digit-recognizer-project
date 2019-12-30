@@ -12,7 +12,7 @@ PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../')
 # STATIC_ROOT= os.path.join(PROJECT_DIR,'API/')
 STATICFILES_DIRS = ()
 print(PROJECT_DIR)
-with gzip.open(PROJECT_DIR+'app/modules/MNIST/resource/knn-40-5000-scale-all.pgz', 'rb') as f:
+with gzip.open(PROJECT_DIR+'app/modules/MNIST/resource/xgb-42-5000-scale-all.pgz', 'rb') as f:
     knnModel = pickle.load(f)
 
 #讀取Model

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>手寫數字辨識</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/draw-pannel.css">
+
+</head>
+
+<body onload="init()">
+  <!-- header -->
+  <header role="banner">
+
+    <h3 class="logo">
+      <img src="https://image.flaticon.com/icons/png/512/1170/1170170.png" alt="" srcset="">
+      手寫數字辨識
+    </h3>
+
+    <nav role="navigation">
+      <a class="p-2 mx-2" href="#section1">簡介</a>
+      <a class="p-2 mx-2" href="#section2">link 2</a>
+      <a class="p-2 mx-2" href="#section3">GitHub</a>
+    </nav>
+  </header>
+  <!-- Main -->
+  <section class='particle-section'>
+    <span class='particle'>1</span>
+    <span class='particle'>2</span>
+    <span class='particle'>3</span>
+    <span class='particle'>4</span>
+    <span class='particle'>5</span>
+    <span class='particle'>5</span>
+    <span class='particle'>6</span>
+    <span class='particle'>7</span>
+    <span class='particle'>8</span>
+    <span class='particle'>9</span>
+    <span class='particle'>0</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>4</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <span class='particle'>0</span>
+    <section class='content'>
+      <!-- <p>Damnit stranger,</p>
+    <p>You got lost in the <strong>404</strong> galaxy.</p>
+    <p>
+      <button>Go back to earth.</button>
+    </p> -->
+      <div class="draw-pannel container" id="mnistapp">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-3 text-right">
+                <h1 id="targetNumber">3</h1>
+              </div>
+              <div class="col-4 text-left">
+                <div class="note-text ex blue">目標數字</div>
+              </div>
+            </div><br>
+          </div>
+          <div class="col-6">
+            <div class="note-text ex pink">Try it! 手寫數字</div>
+            <p>Draw Pannel</p>
+            <canvas id="sketchpad" height="140" width="140"></canvas>
+          </div>
+          <div class="col-6 mb-2">
+            <div class="note-text ex pink2">預測數字</div>
+            <p>Predicted Number</p>
+            <!-- <div id="rightside" class="predict"></div> -->
+            <div class="predict">
+              <img class="mt-4" src="" id="predictImg">
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
+            <button type="button" class="btn btn-warning" id="clearbutton" onclick="clearCanvas(canvas,ctx)">Clear</button>
+            <button type="button" class="btn btn-info" id="clearbutton" onclick="reflash()">Reflash</button>
+            <a class="btn btn-success" id="downloadButton" href="#" download="handwrite-number.png">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section style="height: 800px;" id="section1">
+    sdfsd
+  </section>
+  <section style="height: 800px;" id="section2">
+    sdfsd2
+  </section>
+  <section style="height: 800px;" id="section3">
+    sdfsd3
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"> </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/predict.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/pannel.js"></script>
+</body>
+
+</html>
