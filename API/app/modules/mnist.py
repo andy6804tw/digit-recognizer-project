@@ -4,11 +4,17 @@ import numpy as np
 import cv2
 import math
 import base64 
+# import cloudpickle as cp
+# import urllib.request
+import gzip
+
+with gzip.open('API/app/modules/MNIST/resource/knn-40-5000-scale-all.pgz', 'rb') as f:
+    knnModel = pickle.load(f)
 
 #讀取Model
 # KNN Model
-with open('API/app/modules/MNIST/resource/knn-35-4000-scale-all.pickle', 'rb') as f:
-    knnModel = pickle.load(f)
+# with open('API/app/modules/MNIST/resource/knn-35-4000-scale-all.pickle', 'rb') as f:
+#     knnModel = pickle.load(f)
 # Keras Model
 # kerasModel = load_model('app/modules/MNIST/resource/mnistCNN.h5')
 
@@ -40,16 +46,16 @@ def tsnePredict(image):
       print(i, dist)
   return np.argmin(arr)
 
-# def kerasPredict(image):
-#   reshapImg = np.array(image)
-#   reshapImg = reshapImg.reshape(1,28,28,1)
-#   y_pred = kerasModel.predict([reshapImg])
-#   # pred =  np.argmax(y_pred, axis=1)
-#   return 'pred'
+def kerasPredict(image):
+  reshapImg = np.array(image)
+  reshapImg = reshapImg.reshape(1,28,28,1)
+  y_pred = kerasModel.predict([reshapImg])
+  # pred =  np.argmax(y_pred, axis=1)
+  return 'pred'
 
 def getResult(base64Image=''):
   if base64Image=='':
-    image = cv2.imread("app/modules/MNIST/data/6.png")[:,:,::-1]
+    image = cv2.imread("API/app/modules/MNIST/data/6.png")[:,:,::-1]
   else:
     image=base64_cv2(base64Image)
 
