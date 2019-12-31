@@ -1,3 +1,6 @@
+/**
+ * predict number from API
+ */
 const predictDigit=(image)=>{
   return new Promise(resolve => {
     axios.post(`${domain}/mnist`, {

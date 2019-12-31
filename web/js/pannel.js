@@ -1,6 +1,6 @@
 // Variables for referencing the canvas and 2dcanvas context
 var canvas, ctx;
-var penSixe=10;
+var penSixe = 10;
 // Variables to keep track of the mouse position and left-button status 
 var mouseX, mouseY, mouseDown = 0;
 
@@ -55,7 +55,7 @@ function drawLine(ctx, x, y, size) {
 // Clear the canvas context using the canvas width and height
 function clearCanvas(canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    predictImg.src=``
+    predictImg.src = ``
 }
 
 // Keep track of the mouse button being pressed and draw a dot at current location
@@ -128,10 +128,12 @@ function sketchpad_touchMove(e) {
     event.preventDefault();
 }
 
-// Get the touch position relative to the top-left of the canvas
-// When we get the raw values of pageX and pageY below, they take into account the scrolling on the page
-// but not the position relative to our target div. We'll adjust them using "target.offsetLeft" and
-// "target.offsetTop" to get the correct values in relation to the top left of the canvas.
+/** 
+ * Get the touch position relative to the top-left of the canvas
+ * When we get the raw values of pageX and pageY below, they take into account the scrolling on the page
+ * but not the position relative to our target div. We'll adjust them using "target.offsetLeft" and
+ * "target.offsetTop" to get the correct values in relation to the top left of the canvas.
+ */ 
 function getTouchPos(e) {
     if (!e)
         var e = event;
@@ -170,20 +172,16 @@ async function init() {
     model = await tf.loadModel('./model/model.json');
 }
 
+/**
+ * predict handwrite number using XGBoost model
+ */
 async function predict() {
     const imageData = ctx.getImageData(0, 0, 140, 140);
-    const predictImg=document.getElementById("predictImg");
-    // var img = document.createElement("img");
-    // img.src = canvas.toDataURL("image/png");
-    // document.body.appendChild(img);
+    const predictImg = document.getElementById("predictImg");
 
     const button = document.getElementById('downloadButton');
     const dataURL = canvas.toDataURL('image/png');
     button.href = dataURL;
-
-    const image = dataURL.split(",")[1];
-    result=await predictDigit(image);
-    console.log(result);
 
     //convert to tensor 
     var tfImg = tf.fromPixels(imageData, 1);
@@ -192,36 +190,41 @@ async function predict() {
     var tensor = smalImg.expandDims(0);
     tensor = tensor.div(tf.scalar(255));
     const prediction = model.predict(tensor);
-            const predictedValues = prediction.dataSync();
-            var isThereAnyPrediction = false;
-            for (index = 0; index < predictedValues.length; index++) {
-                if (predictedValues[index] > 0.5) {
-                    isThereAnyPrediction = true;
-                    predictImg.src=`image/img${index}.png`
-                    checkCorrect(index);
-                    // document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
-                }
-            }
-            if (!isThereAnyPrediction) {
-                predictImg.src=`image/img${index}.png`
-            }
+    const predictedValues = prediction.dataSync();
+    var isThereAnyPrediction = false;
+    for (index = 0; index < predictedValues.length; index++) {
+        if (predictedValues[index] > 0.5) {
+            isThereAnyPrediction = true;
+            predictImg.src = `image/img${index}.png`
+            checkCorrect(index);
+        }
+    }
+    if (!isThereAnyPrediction) {
+        predictImg.src = `image/img${index}.png`
+    }
+
+    const image = dataURL.split(",")[1];
+    result = await predictDigit(image);
+    console.log(result);
 }
 
-arr=["section1","section2","section3"]
+/**
+ * <a> link hook with smooth Scrolling
+ */
+arr = ["section1", "section2", "section3"]
 var applyScrolling = function (arr, cb) {
     for (var i = 0; i < arr.length; i++) {
-      cb.call(null, i, arr[i])
+        cb.call(null, i, arr[i])
     }
-  }
-  
-  // 注意如果有使用 router 那麼自訂一個 class 可以避免一些問題
-  var anchors = document.querySelectorAll("a[href^='#section']")
-  if (window.scrollTo) {
+}
+// process multiple hook by id
+var anchors = document.querySelectorAll("a[href^='#section']")
+if (window.scrollTo) {
     applyScrolling(anchors, function (index, el) {
-      var target = document.getElementById(el.getAttribute('href').substring(1))
-      el.addEventListener('click', function (e) {
-        e.preventDefault()
-        window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop})
-      })
+        var target = document.getElementById(el.getAttribute('href').substring(1))
+        el.addEventListener('click', function (e) {
+            e.preventDefault()
+            window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop })
+        })
     })
-  }
+}

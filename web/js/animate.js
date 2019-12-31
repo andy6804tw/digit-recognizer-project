@@ -1,4 +1,6 @@
-// add animation after first animation end
+/** 
+ * add animation after first animation end 
+ **/
 var minutes = document.querySelector('.clock');
 var sun = document.querySelector('.sun');
 var marker = document.querySelector('.marker');
@@ -29,7 +31,9 @@ document.body.onscroll = function (event) {
 };
 
 
-/** Main backage digit particle */
+/** 
+ * Main background digit particle effect 
+ **/
 const sectionParticle=document.getElementById("sectionParticle");
 str='';
 for(let i=1;i<=80;i++){

@@ -22,7 +22,7 @@
       <img src="https://image.flaticon.com/icons/png/512/1170/1170170.png" alt="" srcset="">
       手寫數字辨識
     </h3>
-
+    <!-- Navigation -->
     <nav role="navigation">
       <a class="p-2 mx-2" href="#section1">簡介</a>
       <a class="p-2 mx-2" href="#section2">API</a>
@@ -36,11 +36,7 @@
     <!-- <span class='particle'>1</span>
     <span class='particle'>2</span> -->
     <section class='content'>
-      <!-- <p>Damnit stranger,</p>
-    <p>You got lost in the <strong>404</strong> galaxy.</p>
-    <p>
-      <button>Go back to earth.</button>
-    </p> -->
+      <!-- draw pannel -->
       <div class="draw-pannel container" id="mnistapp">
         <div class="row justify-content-center align-items-center">
           <div class="col-12">
@@ -50,25 +46,28 @@
                   <h1 id="targetNumber">3</h1>
                 </div>
               </div>
+              <!-- target number -->
               <div class="col-4 text-left">
                 <div class="note-text exblue">目標數字</div>
               </div>
             </div><br>
           </div>
           <div class="col-6">
+            <!-- dwaw pannel -->
             <div class="note-text expink">Try it! 手寫數字</div>
             <p>Draw Pannel</p>
             <canvas id="sketchpad" height="140" width="140"></canvas>
           </div>
           <div class="col-6 mb-2">
+            <!-- predicted result -->
             <div class="note-text expink2">預測數字</div>
             <p>Predicted Number</p>
-            <!-- <div id="rightside" class="predict"></div> -->
             <div class="predict">
               <img class="mt-4" src="" id="predictImg">
             </div>
           </div>
           <div class="col-12">
+            <!-- function button -->
             <button type="button" class="btn btn-primary" id="predictbutton" onclick="predict()">Predict</button>
             <button type="button" class="btn btn-warning" id="clearbutton"
               onclick="clearCanvas(canvas,ctx)">Clear</button>
@@ -79,6 +78,7 @@
       </div>
     </section>
   </section>
+  <!-- section 1 introduction the project -->
   <section class="section1 px-4 pt-4 pb-5" id="section1">
     <div class="row justify-content-center align-items-center">
       <div class="col-sm-12 col-md-4 p-4">
@@ -106,8 +106,8 @@
       </div>
     </div>
   </section>
-  <!-- amimate -->
-  <section class="section-amimate p-5 my-5" >
+  <!-- section 2 amimate -->
+  <section class="section-amimate p-5 my-5">
     <div class="row justify-content-center align-items-center  d-none" id="sectionAnimate">
       <div class="col-5">
         <div class="icons-left">
@@ -248,14 +248,17 @@
     sdfsd3
   </section>
 
-  <!-- Footer -->
-	<div id="site-footer">
-    <p class="copy"><a href="https://github.com/andy6804tw" style="color: white;"><i class="fab fa-github fa-lg"></i></a> &nbsp; made with 
-      <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/heavy-black-heart_2764.png" style="width: 14px;"> coding </p>
+  <!-- footer -->
+  <div id="site-footer">
+    <p class="copy"><a href="https://github.com/andy6804tw" style="color: white;"><i
+          class="fab fa-github fa-lg"></i></a> &nbsp; made with
+      <img
+        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/211/heavy-black-heart_2764.png"
+        style="width: 14px;"> coding </p>
   </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/config.js"></script>
   <script src="./js/predict.js"></script>
