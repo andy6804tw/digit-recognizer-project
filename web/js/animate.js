@@ -33,6 +33,6 @@ document.body.onscroll = function (event) {
 const sectionParticle=document.getElementById("sectionParticle");
 str='';
 for(let i=1;i<=80;i++){
-  str+=`<span class='particle'>${(i/i+Math.floor(Math.random() * 10))}</span>`;
+  str+=`<span class='particle'>${((i/i+Math.floor(Math.random() * 10))-1)}</span>`;
 }
 sectionParticle.innerHTML=str;
