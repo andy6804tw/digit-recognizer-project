@@ -8,6 +8,7 @@ const reflash=()=>{
   target=Math.floor(Math.random() * 10); 
   targetNumber.innerText=target;
   clearCanvas(canvas,ctx);
+  document.body.style.backgroundImage ="linear-gradient(rgba(25, 181, 254, 0.6),rgba(166, 219, 255, 0.822)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6))";
 }
 
 const checkCorrect=(index)=>{
