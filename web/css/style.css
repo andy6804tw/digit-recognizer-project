@@ -706,3 +706,18 @@ nav a:hover{
     transform: translateY(-28px);
   }
 }
+
+#site-footer {
+  position: relative;
+  background-color: #051824a9;
+  height: 50px;
+}
+.copy{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size:12px;
+  text-align:center;
+  color: white;
+  font-weight: 300;
+}
