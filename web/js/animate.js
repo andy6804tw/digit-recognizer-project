@@ -20,21 +20,6 @@ centerComposition.addEventListener('animationend', function () {
   centerComposition.classList.add('start');
 });
 
-const start = () => {
-  const sectionAnimate = document.getElementById("sectionAnimate");
-  sectionAnimate.classList.remove('d-none');
-
-  const itemClock = document.getElementById("itemClock");
-  const pinkBall = document.getElementById("pinkBall");
-  const pinkArrow = document.getElementById("pinkArrow");
-  const dashPink = document.getElementById("dashedPink");
-
-  itemClock.classList.add("scale-animation", "delay-730");
-  pinkBall.classList.add("scale-animation", "delay-830");
-  pinkArrow.classList.add("scale-animation", "delay-1030");
-  dashPink.classList.add("dashed-pink");
-}
-
 document.body.onscroll = function (event) {
   const html = document.documentElement;
   if (html.scrollTop > 1000) {
@@ -42,3 +27,12 @@ document.body.onscroll = function (event) {
     sectionAnimate.classList.remove('d-none');
   }
 };
+
+
+/** Main backage digit particle */
+const sectionParticle=document.getElementById("sectionParticle");
+str='';
+for(let i=1;i<=80;i++){
+  str+=`<span class='particle'>${(i/i+Math.floor(Math.random() * 10))}</span>`;
+}
+sectionParticle.innerHTML=str;
