@@ -188,7 +188,6 @@ async function predict() {
     //convert to tensor 
     var tfImg = tf.fromPixels(imageData, 1);
     var smalImg = tf.image.resizeBilinear(tfImg, [28, 28]);
-    console.log(canvas.toDataURL("image/png"))
     smalImg = tf.cast(smalImg, 'float32');
     var tensor = smalImg.expandDims(0);
     tensor = tensor.div(tf.scalar(255));
