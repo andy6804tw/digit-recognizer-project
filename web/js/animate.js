@@ -34,7 +34,6 @@ document.body.onscroll = function (event) {
     const sectionSource=document.getElementById("sectionSource");
     sectionSource.classList.remove("d-none");
   }
-  console.log(html.scrollTop)
 };
 
 

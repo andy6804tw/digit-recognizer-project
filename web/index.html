@@ -27,7 +27,7 @@
       <a class="p-2 mx-2" href="#section1">簡介</a>
       <a class="p-2 mx-2" href="#section2">API</a>
       <!-- <a class="p-2 mx-2" href="#section3">link 2</a> -->
-      <a class="p-2 mx-2" href="https://github.com/andy6804tw/digit-recognizer-project">GitHub</a>
+      <a class="p-2 mx-2" href="#section3">GitHub</a>
     </nav>
   </header>
   <!-- Main -->
@@ -97,9 +97,10 @@
     <br><br>
     <div class="row justify-content-center align-items-center">
       <div class="col-sm-12 col-md-6">
-        本專案使用keras所提供的mnist datasets作為訓練資料，將28*28像素的手寫辨識影像降維，並透過機器學習的方式學習出一個手寫數字的分類器。
+        透過降維的方式我們可以將784維的資料轉換成2維並投射在平面上，並且可以使用平面座標圖來觀察分佈狀況。
         <br><br>
-        我們所用的方法有t-SNE非線性降維、XGBoost 學習一個回歸模型以及使用XGBoost學習一個手寫數字分類器。
+        我們使用 keras 所提供的 mnist datasets 中的訓練資料共六萬筆數據來做 t-SNE 降維。
+        從結果圖中我們可以很清楚的將這六萬張手寫辨識圖片清楚的分類與投影到XY平面座標上。
       </div>
       <div class="col-sm-12 col-md-5 p-4 text-right">
         <img src="https://i.imgur.com/z2joMGT.png" style="width: 100%;">
@@ -107,7 +108,7 @@
     </div>
   </section>
   <!-- section 2 amimate -->
-  <section class="section-amimate p-5 my-5">
+  <section class="section-amimate p-5 my-3">
     <div class="row justify-content-center align-items-center  d-none" id="sectionAnimate">
       <div class="col-5">
         <div class="icons-left">
@@ -233,10 +234,10 @@
   <section class="section2 p-5" id="section2">
     <div class="row justify-content-center align-items-center">
       <div class="col-sm-12 col-md-6 p-4 text-center">
-        <img src="https://i.imgur.com/QpxpzFc.png" style="width: 90%;">
+        <img src="https://i.imgur.com/ayzSAzm.png" style="width: 90%;">
       </div>
-      <div class="col-sm-12 col-md-6">
-        本專案使用keras所提供的mnist datasets作為訓練資料，將28*28像素的手寫辨識影像降維，並透過機器學習的方式學習出一個手寫數字的分類器。
+      <div class="col-sm-12 col-md-6 p-4">
+        本專案使用 Python Flask 建置一個手寫數字辨識 API，並部署在 Heroku 雲端平台上。<br>
         <br><br>
         <div class="text-center">
           <a class="btn btn-outline-light btn-lg" href="https://github.com/andy6804tw/digit-recognizer-project">API Doc</a>
