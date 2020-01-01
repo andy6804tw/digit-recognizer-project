@@ -22,12 +22,19 @@ centerComposition.addEventListener('animationend', function () {
   centerComposition.classList.add('start');
 });
 
+/**
+ * 
+ */
 document.body.onscroll = function (event) {
   const html = document.documentElement;
-  if (html.scrollTop > 1000) {
+  if (html.scrollTop > 1000 && html.scrollTop < 2000) {
     const sectionAnimate = document.getElementById("sectionAnimate");
-    sectionAnimate.classList.remove('d-none');
+    sectionAnimate.classList.remove("d-none");
+  }else if(html.scrollTop > 2050){
+    const sectionSource=document.getElementById("sectionSource");
+    sectionSource.classList.remove("d-none");
   }
+  console.log(html.scrollTop)
 };
 
 

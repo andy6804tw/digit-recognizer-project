@@ -707,10 +707,27 @@ nav a:hover{
   }
 }
 
+#section3{
+  height: 700px;
+  background:#000 url(https://i.imgur.com/bupR2XX.png) center center fixed no-repeat;
+  background-size: cover;
+  -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0.5));
+  /* -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0.1)); */
+}
+#section3 .flex{
+  display:flex;
+  width:600px;
+  height:100%;
+  margin: auto;
+}
+#section3 .flex div{
+  margin:auto;
+}
+
 #site-footer {
   position: relative;
   background-color: #051824a9;
-  height: 50px;
+  height: 90px;
 }
 .copy{
   width: 100%;
