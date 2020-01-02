@@ -10,7 +10,7 @@ jobs:
       MY_SECRET   : ${{secrets.commit_secret}}
       USER_NAME   : githubaction
       USER_EMAIL  : githubaction@fake.com
-      PUBLISH_DIR : ./dist
+      PUBLISH_DIR : ./web
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,13 +21,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install
-      run: |
-        npm install
-    - name: npm run build
-      run: |
-        npm run gulp m
-        npm run build
     - name: Commit files
       run: |
         cd $PUBLISH_DIR
