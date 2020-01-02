@@ -8,8 +8,8 @@ jobs:
     name: Build and deploy gh-pages
     env:
       MY_SECRET   : ${{secrets.commit_secret}}
-      USER_NAME   : githubaction
-      USER_EMAIL  : githubaction@fake.com
+      USER_NAME   : andy6804tw
+      USER_EMAIL  : andy6804tw@yahoo.com.tw
       PUBLISH_DIR : ./web
     runs-on: ubuntu-latest
     strategy:
