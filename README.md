@@ -12,3 +12,5 @@
 ## Heroku部署Open CV
 - [heroku-buildpack-apt ](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-apt)
 - [Author](https://github.com/jeromevonk/flask_face_detection)
+
+- [5 Platforms That Provide Free Django App Hosting](https://codecondo.com/5-platforms-provide-free-django-app-hosting/)
