@@ -10,10 +10,10 @@ import os
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 # PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../')
 PROJECT_DIR=''
-with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(regression)-42-12000-scale-all.pgz', 'rb') as f:
+with gzip.open(PROJECT_DIR+'app/modules/MNIST/resource/xgb(regression)-42-12000-scale-all.pgz', 'rb') as f:
     xgbRModel = pickle.load(f)
     print(xgbRModel)
-with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(classfication)-42-12000-scale-all.pgz', 'rb') as f:
+with gzip.open(PROJECT_DIR+'app/modules/MNIST/resource/xgb(classfication)-42-12000-scale-all.pgz', 'rb') as f:
     xgbCModel = pickle.load(f)
 
 
@@ -63,7 +63,7 @@ def getResult(base64Image=''):
         response predict result
   """
   if base64Image=='':
-    image = cv2.imread(PROJECT_DIR+"API/app/modules/MNIST/data/4.png")[:,:,::-1]
+    image = cv2.imread(PROJECT_DIR+"app/modules/MNIST/data/4.png")[:,:,::-1]
   else:
     image=base64_cv2(base64Image)
 
