@@ -6,7 +6,8 @@
 ## Heroku API 部署
 該如何部署可以參考[這裏](https://github.com/1010code/heroku-flask-api-example)
 
-[測試API](https://digit-recognizer-project.herokuapp.com/mnist)
+- [API測試](https://digit-recognizer-project.herokuapp.com/mnist)
+- [API文件](https://andy6804tw.github.io/digit-recognizer-project/document/API.html)
 
 ## 資源
 ### MNIST 手寫字符數據集
@@ -21,3 +22,5 @@
 ### Heroku部署Open CV
 - [heroku-buildpack-apt ](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-apt)
 - [5 Platforms That Provide Free Django App Hosting](https://codecondo.com/5-platforms-provide-free-django-app-hosting/)
+
+![](https://i.imgur.com/2E8S9jF.png)
