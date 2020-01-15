@@ -1,6 +1,5 @@
 from flask import jsonify
 import pickle
-# from keras.models import load_model
 import numpy as np
 import cv2
 import math
@@ -9,18 +8,15 @@ import gzip
 import os
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../../')
-with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(regression)-42-5000-scale-all.pgz', 'rb') as f:
+# PROJECT_DIR = os.path.join(PROJECT_ROOT,'../../')
+PROJECT_DIR=''
+with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(regression)-42-12000-scale-all.pgz', 'rb') as f:
     xgbRModel = pickle.load(f)
-with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(classfication)-42-5000-scale-all.pgz', 'rb') as f:
+    print(xgbRModel)
+with gzip.open(PROJECT_DIR+'API/app/modules/MNIST/resource/xgb(classfication)-42-12000-scale-all.pgz', 'rb') as f:
     xgbCModel = pickle.load(f)
 
-#讀取Model
-# KNN Model
-# with open('API/app/modules/MNIST/resource/knn-35-4000-scale-all.pickle', 'rb') as f:
-#     knnModel = pickle.load(f)
-# Keras Model
-# kerasModel = load_model('app/modules/MNIST/resource/mnistCNN.h5')
+
 
 def base64_cv2(base64_str):
     """
@@ -67,7 +63,7 @@ def getResult(base64Image=''):
         response predict result
   """
   if base64Image=='':
-    image = cv2.imread(PROJECT_DIR+"API/app/modules/MNIST/data/6.png")[:,:,::-1]
+    image = cv2.imread(PROJECT_DIR+"API/app/modules/MNIST/data/4.png")[:,:,::-1]
   else:
     image=base64_cv2(base64Image)
 
