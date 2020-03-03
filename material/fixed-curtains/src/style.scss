@@ -1,0 +1,77 @@
+// Demo Crap
+*{&:before, &:after{box-sizing: inherit;}}html{box-sizing: border-box;font-family:'Droid Serif',serif;font-size: 100%;line-height:1.5;}header[role="banner"]{padding: 20px;}footer[role="contentinfo"]{background:#253537;color:white;}h2{margin-bottom: 0;}nav a{color: #071A24;padding:0 5px;text-decoration: none;}
+
+
+// Required Styles & Config
+// READ FIRST:
+// This demo uses normalize and autoprefixer. I strongly suggest that you find
+// something to prefix junk for you otherwise you're writing it out by hand.
+
+$fcurtain_lgscr: 640px;
+$fcurtain_type: full; // accepts [full,fixed]
+$fcurtain_height: null; // accepts px value if height is fixed (i.e. 340px)
+$fcurtain_bg: #EFE99D;
+$fcurtain_bgimg: (
+  // panel position  : panel image
+  1 : 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/mountain-peaks.jpg',
+  3 : 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/geometric-mountains.jpg',
+  5 : 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/mountain-gaze.jpg'
+);
+
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+header[role="banner"] {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 1;
+}
+
+.fc-identity {
+  flex: 5;
+}
+
+nav[role="navigation"] {
+  flex: 5;
+  text-align: right;
+}
+
+main[role="main"] > * {
+  max-width: $fcurtain_lgscr;
+  padding: 1.65em calc(50% - #{$fcurtain_lgscr/2});
+}
+
+.fcurtain--cover {
+  @if $fcurtain_type == full {
+    min-height: 100%;
+  } @elseif $fcurtain_type == fixed {
+    height: $fcurtain_height;
+  }
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-positon: center center;
+  background-repeat: no-repeat;
+  background-color: $fcurtain_bg;
+  @each $key, $value in $fcurtain_bgimg {
+    &:nth-of-type(#{$key}) {
+      background-image: url(#{$value});
+    }
+  }
+}
+
+.fcurtain--callout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

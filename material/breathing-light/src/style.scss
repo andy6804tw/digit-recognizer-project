@@ -1,0 +1,35 @@
+@import "compass/css3";
+
+$from-color: darkgreen;
+$to-color: limegreen;
+
+@-webkit-keyframes blinking {
+  from {
+    background-color: $from-color;
+    box-shadow: 0 0 30px $from-color;
+  }
+
+  to {
+    background-color: $to-color;    
+    box-shadow: 0 0 100px $to-color;
+  }
+}
+
+body {
+  background-color:#282828;
+}
+
+div.light {
+  width: 10px;
+  height: 10px;
+
+  margin: 30px auto;
+  
+  border-radius: 10px;
+ 
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: blinking;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+}
