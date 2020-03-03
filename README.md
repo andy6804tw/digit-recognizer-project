@@ -1,4 +1,4 @@
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andy6804tw/digit-recognizer-project/master)
 
 # 動手做一個機器學習 API 吧 !
 ### [Demo](https://andy6804tw.github.io/digit-recognizer-project/)
