@@ -1,0 +1,61 @@
+
+.draw-pannel{
+  width: 600px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+/* Some CSS styling */
+
+#mnistapp {
+  /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rightside {
+  float: left;
+  width: 140px;
+  height: 125px;
+  background-color: #def;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.leftside {
+  float: left;
+  width: 150px;
+  height: 200px;
+  margin-left: 10px;
+}
+
+#sketchpad {
+  float: left;
+  height: 140px;
+  width: 140px;
+  border: 2px solid #888;
+  border-radius: 4px;
+  position: relative;
+  background-color: black;
+  /* Necessary for correct mouse co-ords in Firefox */
+}
+
+#clearbutton {
+  font-size: 15px;
+  padding: 10px;
+  -webkit-appearance: none;
+  background: #eee;
+  border: 1px solid #888;
+}
+
+#predictbutton {
+  font-size: 15px;
+  padding: 10px;
+  -webkit-appearance: none;
+  background: #eee;
+  border: 1px solid #888;
+}

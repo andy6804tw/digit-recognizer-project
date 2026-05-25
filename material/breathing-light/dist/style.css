@@ -1,0 +1,39 @@
+@-webkit-keyframes blinking {
+  from {
+    background-color: #4c9efc;
+    box-shadow: 0 0 30px #4c9efc;
+  }
+  to {
+    background-color: #6cbff7;
+    box-shadow: 0 0 100px #6cbff7;
+  }
+}
+
+div.light {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0;
+  margin: 0;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: blinking;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+
+div.light h1 {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}

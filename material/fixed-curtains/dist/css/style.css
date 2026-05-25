@@ -1,0 +1,93 @@
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Droid Serif',serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+header[role="banner"] {
+  padding: 20px;
+}
+
+footer[role="contentinfo"] {
+  background: #253537;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #071A24;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+html,
+body{
+  height: 100%;
+}
+.main-section{
+  height: 100%;
+}
+.sub-section{
+  height: 20%;
+}
+
+header[role="banner"] {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 1;
+}
+
+.fc-identity {
+  flex: 5;
+}
+
+nav[role="navigation"] {
+  flex: 5;
+  text-align: right;
+}
+
+main[role="main"] > * {
+  max-width: 640px;
+  padding: 1.65em calc(50% - 320px);
+}
+
+.fcurtain--cover {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-positon: center center;
+  background-repeat: no-repeat;
+  background-color: #EFE99D;
+  margin: 0;
+  padding: 0;
+}
+.fcurtain--cover:nth-of-type(1) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/mountain-peaks.jpg);
+}
+.fcurtain--cover:nth-of-type(3) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/geometric-mountains.jpg);
+}
+.fcurtain--cover:nth-of-type(5) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/mountain-gaze.jpg);
+}
+
+.fcurtain--callout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
